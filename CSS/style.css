@@ -1,0 +1,210 @@
+/*Global layout styles*/
+* {
+	box-sizing: border-box;
+/*	border: .5px dotted red;*/
+}
+
+/*Color scheme: http://paletton.com/#uid=23+0u0kobl+f0uRkcpQsuhJ-dcl*/
+body {
+	font-family: "Noto Serif", serif;
+	color: #090945;
+	width: 100%;
+	margin: auto;
+	max-width: 400px;
+}
+
+/*-----------Header and Banner Styling-----------*/
+
+header {
+	background-color: #090945;
+	color: #ffffff;
+	text-align: center;
+	text-transform: uppercase;
+	padding: 1em 0;
+
+}
+
+.banner {
+	text-align: center;
+/*	border-bottom: 4px solid;
+*/	padding: 1.5em;
+}
+
+.banner p {
+	border-bottom: 4px solid;
+}
+
+/*-----------Form Styling-----------*/
+.contact {
+	border-top: 2px solid;
+	border-bottom: 2px solid;
+	margin-top: 3px;
+	position: relative;
+}
+
+.contact:before {
+	content: " ";
+	position: absolute;
+	border-top: 4px solid;
+}
+
+fieldset {
+	margin-top: 2px;
+	border: none;
+}
+
+.fieldset-header {
+	font-size: 1.5em;
+	font-weight: bold;
+	display: inline-block;
+	margin: 1.5em auto;
+}
+
+label {
+	display: inline-block;
+	margin: .75em auto;
+	vertical-align: middle;
+}
+
+input[disabled]{
+	color: #999999;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"], 
+textarea,
+select {
+	color: #999999;
+	background-color: #d1d1e6;
+	width: 100%;
+	padding: 1em;
+	border: none;
+	border-radius: 5px;
+	outline: none;
+	height: 4em;
+	resize: none;
+	font-family: "Noto Serif", serif;
+}
+
+input[type="checkbox"], 
+input[type="radio"], {
+	display: block;
+	vertical-align: middle;
+	padding-right: 1em;
+}
+
+input[id="zip"]{
+	display: block;
+	width: 50%;
+	margin-bottom: 1.5em;
+}
+
+textarea[name="news_topics"] {
+	height: 8em;
+}
+
+::-webkit-input-placeholder
+/*::-moz-placeholder,
+:-ms-input-placeholder,
+:-moz-placeholder, */ {
+	font-style: italic;
+	text-align: right;
+	font-size: .8em;
+	color: #999999;
+}
+
+
+
+
+
+
+/*==============Come back to this ===========>>>>>*/
+option[id="choose-state"] {
+	color: #ffffff;
+}
+/*<<<<<<=======Come back to this ================*/
+
+
+
+
+
+.newsletter {
+	padding-left: 1em;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+	border: 3px solid #090945;
+	color: #000000;
+}
+
+
+.subhead {
+	display: block;
+	margin-bottom: 1em;
+}
+
+#submit {
+	width: 100%;
+	background-color: #090945;
+	color: #ffffff;
+	font-size: 1.5em;
+	padding: .75em 0;
+	margin: 1em auto;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+}
+/*-----------Footer Styling-----------*/
+
+footer {
+	text-align: center;
+	font-style: italic;
+}
+
+/*------------MEDIA QUERIES(Min-Width-768px----------*/
+
+@media(min-width: 768px) {
+
+	body {
+		max-width: none;
+		font-size: .8em;
+	}
+
+	form,
+	.banner {
+		max-width: 600px;
+		margin: auto;
+	}
+
+	.fieldset-header {
+		margin: 3em 0 1em;
+	}
+	.contact label {
+		width: 30%;
+		margin: .6em 0;
+	}
+
+	.contact input,
+	.contact select {
+		display: inline;
+
+		width: 69%;
+		margin: .6em 0;
+	}
+
+	input[id="zip"]{
+		margin: .5em 0 2.5em 0;
+		width: 30%;
+	}
+	textarea[name="news_topics"] {
+		height: 5em;
+	}
+}
+
+
+
+
+
