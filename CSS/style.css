@@ -1,38 +1,44 @@
 /*Global layout styles*/
 * {
 	box-sizing: border-box;
-/*	border: .5px dotted red;*/
 }
 
 /*Color scheme: http://paletton.com/#uid=23+0u0kobl+f0uRkcpQsuhJ-dcl*/
 body {
+	color: #005A66;
 	font-family: "Noto Serif", serif;
-	color: #090945;
-	width: 100%;
 	margin: auto;
-	max-width: 400px;
+	width: 100%;
 }
 
 /*-----------Header and Banner Styling-----------*/
 
 header {
-	background-color: #090945;
+	background-color: #5199a3;
 	color: #ffffff;
+	max-width: 100%;
+	padding: 1em 0;
 	text-align: center;
 	text-transform: uppercase;
-	padding: 1em 0;
 
 }
 
 .banner {
-	text-align: center;
+
 	border-bottom: 4px solid;
-	padding: 1.5em;
-	width: 98%;
 	margin: auto;
+	padding: 1.5em;
+	text-align: center;
+	width: 98%;
 }
 
 /*-----------Form Styling-----------*/
+
+.contact,
+.newsletter {
+	background-color: #ddf5f8;
+}
+
 .contact {
 	border-top: 2px solid;
 	border-bottom: 2px solid;
@@ -42,16 +48,22 @@ header {
 	width: 98%;
 }
 
+.newsletter {
+	margin-left: auto;
+	margin-right: auto;
+	width: 98%;
+}
+
 fieldset {
-	margin-top: 2px;
 	border: none;
 	margin: auto;
+	margin-top: 2px;
 }
 
 .fieldset-header {
+	display: inline-block;
 	font-size: 1.5em;
 	font-weight: bold;
-	display: inline-block;
 	margin: 1.5em auto;
 }
 
@@ -70,67 +82,79 @@ input[type="email"],
 input[type="tel"], 
 textarea,
 select {
-	color: #999999;
-	background-color: #d1d1e6;
-	width: 100%;
-	padding: 1em;
+	background-color: #B0E0E6;
 	border: none;
 	border-radius: 5px;
-	outline: none;
-	height: 4em;
-	resize: none;
+	color: #999999;
 	font-family: "Noto Serif", serif;
+	height: 4em;
+	outline: none;
+	padding: 1em;
+	resize: none;
+	width: 100%;
+	-webkit-appearance:none;
+	-moz-appearance: none;
 }
 
-input[type="checkbox"], 
-input[type="radio"], {
-	display: block;
-	vertical-align: middle;
+input[type="checkbox"] {
+	display: inline-block;
 	padding-right: 1em;
+	vertical-align: middle;
+}
+
+input[type="radio"] {
+	display: inline-block;
+	padding-right: 1em;
+	vertical-align: middle;
+
 }
 
 input[id="zip"]{
 	display: block;
-	width: 50%;
 	margin-bottom: 1.5em;
+	width: 50%;
 }
 
 textarea[name="news_topics"] {
 	height: 8em;
 }
 
-::-webkit-input-placeholder
-/*::-moz-placeholder,
-:-ms-input-placeholder,
-:-moz-placeholder, */ {
-	font-style: italic;
-	text-align: right;
-	font-size: .8em;
+::-moz-placeholder {
 	color: #999999;
+	font-style: italic;
+	font-size: .8em;
+	text-align: right;
 }
+/*
+:-ms-input-placeholder,
+:-moz-placeholder 
+*/
 
-
-
-
-
-
-/*==============Come back to this ===========>>>>>*/
-option[id="choose-state"] {
-	color: #ffffff;
+::-webkit-input-placeholder {
+	color: #999999;
+	font-style: italic;
+	font-size: .8em;
+	text-align: right;
 }
-/*<<<<<<=======Come back to this ================*/
 
 .newsletter-input {
 	padding-left: 1em;
 }
 
+
+input:hover,
+textarea:hover,
+select:hover {
+	background-color: #ffbb7c;
+	transition: 1s;
+}
+
 input:focus,
 textarea:focus,
 select:focus {
-	border: 3px solid #090945;
+	border: 3px solid #005A66;
 	color: #000000;
 }
-
 
 .subhead {
 	display: block;
@@ -138,42 +162,41 @@ select:focus {
 }
 
 #submit {
-	width: 100%;
 	background-color: #090945;
-	color: #ffffff;
-	font-size: 1.5em;
-	padding: .75em 0;
-	margin: 1em auto;
 	border: none;
 	border-radius: 5px;
+	color: #ffffff;
 	cursor: pointer;
+	font-size: 1.5em;
+	margin: 1em auto;
+	padding: .75em 0;
+	width: 100%;
+}
+
+#submit:hover {
+	background-color: #FF7A00;
+	transition: .5s;
 }
 /*-----------Footer Styling-----------*/
 
 footer {
-	text-align: center;
 	font-style: italic;
+	text-align: center;
 }
 
 /*------------MEDIA QUERIES(Min-Width-768px----------*/
 
 @media(min-width: 768px) {
-* {
-	border: 1px solid gold;
-}
+
 	body {
-		max-width: none;
 		font-size: .8em;
+		max-width: none;
 	}
 
-	form,
 	.banner,
 	.contact {
 		max-width: 600px;
-		left-margin: auto;
-		right-margin: auto;
 	}
-
 
 	.newsletter {
 		margin: auto;
@@ -184,15 +207,15 @@ footer {
 		margin: 3em 0 1em;
 	}
 	.contact label {
-		width: 30%;
 		margin: .6em 0;
+		width: 30%;
 	}
 
 	.contact input,
 	.contact select {
 		display: inline;
-		width: 69%;
 		margin: .6em 0;
+		width: 69%;
 	}
 
 	input[id="zip"]{
