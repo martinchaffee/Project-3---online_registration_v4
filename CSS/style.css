@@ -125,10 +125,6 @@ textarea[name="news_topics"] {
 	font-size: .8em;
 	text-align: right;
 }
-/*
-:-ms-input-placeholder,
-:-moz-placeholder 
-*/
 
 ::-webkit-input-placeholder {
 	color: #999999;
@@ -140,7 +136,6 @@ textarea[name="news_topics"] {
 .newsletter-input {
 	padding-left: 1em;
 }
-
 
 input:hover,
 textarea:hover,
