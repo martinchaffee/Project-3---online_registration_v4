@@ -137,18 +137,13 @@ textarea[name="news_topics"] {
 	padding-left: 1em;
 }
 
-input:hover,
-textarea:hover,
-select:hover {
-	background-color: #ffbb7c;
-	transition: 1s;
-}
-
 input:focus,
 textarea:focus,
 select:focus {
+	background-color: #ffbb7c;
 	border: 3px solid #005A66;
 	color: #000000;
+	transition: .5s;
 }
 
 .subhead {
@@ -172,6 +167,7 @@ select:focus {
 	background-color: #FF7A00;
 	transition: .5s;
 }
+
 /*-----------Footer Styling-----------*/
 
 footer {
